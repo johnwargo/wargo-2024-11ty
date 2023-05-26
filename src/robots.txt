@@ -1,0 +1,4 @@
+Sitemap: https://aworldwithoutapps.com/sitemap.xml
+
+User-agent: *
+Disallow:

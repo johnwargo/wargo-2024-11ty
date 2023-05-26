@@ -1,0 +1,50 @@
+---
+title: Articles
+description: All posts in reverse chronological order.
+layout: generic
+eleventyNavigation:
+  key: Articles
+  order: 2
+pagination:
+  data: collections.post
+  size: 20
+  alias: posts
+  reverse: true 
+---
+
+<p>This page lists all articles in reverse chronological order. Use the
+  <a href="{{ "/" | htmlBaseUrl }}categories">Categories</a>
+  page to view the list of categories or
+  <a href="{{ "/" | htmlBaseUrl }}search">Search</a>
+  to locate a particular article.</p>
+
+{% include 'pagination-count.html' %}
+
+{% for post in posts %}
+  <article>
+    <h4>
+      <a href="{{post.url}}">{{ post.data.title }}</a>
+    </h4>
+    <p>
+      Posted {{ post.date | readableDate }}&nbsp;
+      {% if post.data.categories.length > 0 %}
+        in
+        {% for cat in post.data.categories %}
+          <a href="/categories/{{ cat | slugify }}">{{ cat }}</a>
+          {%- unless forloop.last %},
+          {% endunless %}
+        {% endfor %}
+      {% endif %}
+    </p>
+    <p>
+      {% if post.data.description %}
+        {{ post.data.description }}
+      {% else %}
+        {% excerpt post %}
+      {% endif %}
+    </p>
+  </article>
+  <br/>
+{% endfor %}
+
+{% include 'pagination-nav.html' %}

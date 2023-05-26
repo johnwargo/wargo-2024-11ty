@@ -1,0 +1,30 @@
+{
+  "name": "wargo-2024",
+  "version": "0.0.1",
+  "description": "Internet home for US Presidential candidate John M. Wargo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Eleventy"
+  ],
+  "author": "John M. Wargo",
+  "license": "MIT",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-img": "^3.1.0",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@google-analytics/data": "^3.2.2",
+    "eleventy-category-pages": "^0.0.7",
+    "eleventy-plugin-date": "^1.0.0",
+    "eleventy-plugin-post-stats": "^0.0.7",
+    "eleventy-plugin-youtube-embed": "^1.9.0",
+    "generate-build-info": "^0.0.3",
+    "html-minifier": "^4.0.0",
+    "markdown-it": "^13.0.1",
+    "markdown-it-attrs": "^4.1.6",
+    "outdent": "^0.8.0"
+  }
+}

@@ -1,0 +1,23 @@
+---
+title: Categories
+description: Displays a list of all post categories on the site. From here you can click a link to open a page displaying all of the posts for the particular category.
+layout: generic
+eleventyNavigation:
+  key: Categories
+  order: 3
+---
+
+{% assign categories = category-meta | sort %}
+
+<p>View all posts for a particular category by clicking on one of the categories listed below. There are {{ categories.length }} categories on the site today.</p>
+
+{% for catData in categories %}
+  <article>
+    <h4>
+      <a href="{{ "/" | htmlBaseUrl }}categories/{{ catData.category | slugify }}/">{{ catData.category }}</a>&nbsp;<span>(Count: {{ catData.count }})</span>
+    </h4>
+    {% if catData.description.length > 0 %}
+      <p>{{ catData.description }}</p>
+    {% endif %}
+  </article>
+{% endfor %}
