@@ -1,5 +1,6 @@
 # John M. Wargo for President (11ty)
 
+The internet home for [John M. Wargo for President](https://wargo2024.com) (2024).
 
 ## Tasks
 
