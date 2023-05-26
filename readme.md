@@ -4,12 +4,13 @@ The internet home for [John M. Wargo for President](https://wargo2024.com) (2024
 
 ## Tasks
 
-* [ ] Publish to Netlify
+* [x] Setup Google Analytics
 * [ ] Home page content
 * [ ] About page content
 * [ ] Posts
 * [ ] Custom icon 
 * [ ] Manifest
+* [ ] Publish to Netlify
 * [ ] 
 * [ ] 
 * [ ] 
@@ -17,7 +18,7 @@ The internet home for [John M. Wargo for President](https://wargo2024.com) (2024
 * [ ] 
 * [ ] 
 * [ ] 
-* [ ] Setup Google Analytics
+
 * [ ] Setup Algolia Index
 * [ ] Add Search page
 * [ ] 
