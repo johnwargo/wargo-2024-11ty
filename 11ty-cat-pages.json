@@ -1,5 +1,5 @@
 {
-  "categoryFolder": "src/category",
+  "categoryFolder": "src/categories",
   "dataFileName": "category-meta.json",
   "dataFolder": "src/_data",
   "postsFolder": "src/posts",

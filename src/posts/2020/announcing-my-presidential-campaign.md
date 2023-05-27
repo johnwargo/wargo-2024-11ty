@@ -4,7 +4,8 @@ title: Announcing My Candidacy
 description: 
 date: 2020-11-04
 headerImage: 
-categories: []
+categories: 
+  - Announcements
 ---
 
 Today, I officially announce my candidacy for President of the United States in 2024. What this country needs is a strong, Independent candidate and I want to be that candidate (with your help, of course).
