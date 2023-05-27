@@ -4,7 +4,9 @@
   "description": "Internet home for US Presidential candidate John M. Wargo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "eleventy --serve",
+    "build": "eleventy"
   },
   "keywords": [
     "Eleventy"
