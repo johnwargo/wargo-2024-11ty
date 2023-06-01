@@ -25,7 +25,7 @@ The internet home for [John M. Wargo for President](https://wargo2024.com) (2024
 * [ ] About page content
 * [ ] Branded products store
 * [ ] Store page
-* [ ] 
+* [ ] Store page header image
 * [ ] 
 * [ ] 
 * [ ] Setup Algolia Index
