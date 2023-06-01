@@ -4,7 +4,7 @@ description: About this site.
 layout: generic
 eleventyNavigation:
   key: About
-  order: 6
+  order: 30
 ---
 
 I'm a regular guy with no experience in politics; yes, I do think that makes me an excellent candidate for President of the United States.

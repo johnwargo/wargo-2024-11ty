@@ -1,0 +1,44 @@
+---
+title: Policy Statements
+description: All policy statements in alphabetical order
+layout: generic
+eleventyNavigation:
+  key: Policy Statements
+  order: 2
+pagination:
+  data: collections.policies
+  size: 20
+  alias: policies
+  reverse: true 
+---
+
+{% include 'pagination-count.html' %}
+
+{% for policy in policies %}
+  <article>
+    <h4>
+      <a href="{{policy.url}}">{{ policy.data.title }}</a>
+    </h4>
+    <p>
+      Posted {{ policy.date | readableDate }}&nbsp;
+      {% if policy.data.categories.length > 0 %}
+        in
+        {% for cat in policy.data.categories %}
+          <a href="/categories/{{ cat | slugify }}">{{ cat }}</a>
+          {%- unless forloop.last %},
+          {% endunless %}
+        {% endfor %}
+      {% endif %}
+    </p>
+    <p>
+      {% if policy.data.description %}
+        {{ policy.data.description }}
+      {% else %}
+        {% excerpt policy %}
+      {% endif %}
+    </p>
+  </article>
+  <br/>
+{% endfor %}
+
+{% include 'pagination-nav.html' %}
