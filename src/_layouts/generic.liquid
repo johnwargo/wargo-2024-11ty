@@ -17,11 +17,8 @@ License: pixelarity.com/license
     {% include "google-analytics.html" %}
   </head>
   <body class="is-preload">
-
-    <!-- Page Wrapper -->
     <div id="page-wrapper">
 
-      <!-- Wrapper -->
       <div class="wrapper">
         <div class="inner">
           {% include "header.html" %}
@@ -29,10 +26,12 @@ License: pixelarity.com/license
         </div>
       </div>
 
-      <!-- Wrapper -->
       <div class="wrapper">
         <div class="inner">
           <section class="main">
+            {% if headerImage %}
+              <span class="image fit"><img src="{{ headerImage }}" alt="{{headerDescription}}" /></span>
+            {% endif %}
             <header class="major">
               <h1>{{ title }}</h1>
             </header>
@@ -41,99 +40,14 @@ License: pixelarity.com/license
         </div>
       </div>
 
-      <!-- Wrapper -->
       <div class="wrapper">
         <div class="inner">
-
-          <!-- Footer -->
           <footer id="footer">
-            <section class="links">
-              <div>
-                <h3>Magna</h3>
-                <ul class="plain">
-                  <li>
-                    <a href="#">Aliquam tempus</a>
-                  </li>
-                  <li>
-                    <a href="#">Ultrecies nul</a>
-                  </li>
-                  <li>
-                    <a href="#">Gravida ultricies</a>
-                  </li>
-                  <li>
-                    <a href="#">Commodo etiam</a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3>Feugiat</h3>
-                <ul class="plain">
-                  <li>
-                    <a href="#">Morbi sem lorem</a>
-                  </li>
-                  <li>
-                    <a href="#">Praes sed dapi</a>
-                  </li>
-                  <li>
-                    <a href="#">Sed adipis nullam</a>
-                  </li>
-                  <li>
-                    <a href="#">Fus dolor lacinia</a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3>Tempus</h3>
-                <ul class="plain">
-                  <li>
-                    <a href="#">Donecnec etiam</a>
-                  </li>
-                  <li>
-                    <a href="#">Aapibus sedun</a>
-                  </li>
-                  <li>
-                    <a href="#">Namnulla tempus</a>
-                  </li>
-                  <li>
-                    <a href="#">Morbi set amet</a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3>Aliquam</h3>
-                <ul class="plain">
-                  <li>
-                    <a href="#">Lorem prasent dia</a>
-                  </li>
-                  <li>
-                    <a href="#">Nellentes ipsum</a>
-                  </li>
-                  <li>
-                    <a href="#">Diamsed arcu dolor</a>
-                  </li>
-                  <li>
-                    <a href="#">Sit amet cursus</a>
-                  </li>
-                </ul>
-              </div>
-            </section>
-            <ul class="contact-icons">
-              <li class="icon solid fa-home">1234 Fictional Street #5432 Nashville, TN 00000-0000</li>
-              <li class="icon solid fa-phone">
-                <a href="#">(000) 000-0000</a>
-              </li>
-              <li class="icon solid fa-envelope">
-                <a href="#">info@untitled.tld</a>
-              </li>
-            </ul>
-            <p class="copyright">&copy; Untitled. All rights reserved.</p>
+            {% include "copyright.html" %}
           </footer>
-
         </div>
       </div>
-
     </div>
-
     {% include "page-scripts.html" %}
 
   </body>

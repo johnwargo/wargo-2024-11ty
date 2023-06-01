@@ -21,7 +21,7 @@ module.exports = eleventyConfig => {
 
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(eleventyNavigationPlugin);
-	eleventyConfig.addPlugin(embedYouTube); 
+	eleventyConfig.addPlugin(embedYouTube);
 	eleventyConfig.addPlugin(pluginDate);
 	eleventyConfig.addPlugin(pluginRss);
 	eleventyConfig.addPlugin(pluginImages);
@@ -73,6 +73,14 @@ module.exports = eleventyConfig => {
 		return Array.from(categories);
 	});
 
+	eleventyConfig.addCollection("policiesDescending", (collection) =>
+		collection.getFilteredByGlob("src/policies/*.md").sort((a, b) => {
+			if (a.data.title > b.data.title) return 1;
+			else if (a.data.title < b.data.title) return -1;
+			else return 0;
+		})
+	);
+
 	// https://www.raymondcamden.com/2020/06/24/adding-algolia-search-to-eleventy-and-netlify
 	// Remove <code>.*</code>, remove HTML, then with plain text, limit to 5k chars
 	eleventyConfig.addFilter('algExcerpt', function (text) {
@@ -118,7 +126,7 @@ module.exports = eleventyConfig => {
 	// for (let i = 2009; i <= thisYear; i++) {
 	// 	eleventyConfig.addPassthroughCopy(`src/images/${i}/*`);
 	// }
-				
+
 	// Only minify HTML if we are in production because it slows builds
 	if (isProduction) {
 		eleventyConfig.addTransform('htmlmin', htmlMinTransform);

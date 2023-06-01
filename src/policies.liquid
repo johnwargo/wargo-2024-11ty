@@ -1,0 +1,54 @@
+---
+title: Policy Statements
+description: All policy statements in alphabetical order
+layout: generic
+headerImage: /images/headers/glenn-carstens-peters-RLw-UC03Gwc-unsplash.jpg
+headerDescription: An image of a person holding a pen over a notebook.
+eleventyNavigation:
+  key: Policy Statements
+  order: 2
+pagination:
+  data: collections.policiesDescending
+  size: 20
+  alias: policies
+---
+
+{% include 'pagination-count.html' %}
+
+{% for policy in policies %}
+  <article>
+    <h4>
+      <a href="{{policy.url}}">{{ policy.data.title }}</a>
+    </h4>
+    <p>
+      Posted {{ policy.date | readableDate }}&nbsp;
+      {% if policy.data.categories.length > 0 %}
+        in
+        {% for cat in policy.data.categories %}
+          <a href="/categories/{{ cat | slugify }}">{{ cat }}</a>
+          {%- unless forloop.last %},
+          {% endunless %}
+        {% endfor %}
+      {% endif %}
+    </p>
+    <p>
+      {% if policy.data.description %}
+        {{ policy.data.description }}
+      {% else %}
+        {% excerpt policy %}
+      {% endif %}
+    </p>
+    <a href="{{policy.url}}" class="button primary">Read More</a>
+  </article>
+  <br/>
+{% endfor %}
+
+{% include 'pagination-nav.html' %}
+
+<hr/>
+
+<p>Photo by
+  <a href="https://unsplash.com/@glenncarstenspeters?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Glenn Carstens-Peters</a>
+  on
+  <a href="https://unsplash.com/photos/RLw-UC03Gwc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.
+</p>

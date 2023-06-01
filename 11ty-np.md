@@ -1,5 +1,4 @@
 ---
-tags: post
 title: 
 description: 
 date: 

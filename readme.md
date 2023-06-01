@@ -12,17 +12,23 @@ The internet home for [John M. Wargo for President](https://wargo2024.com) (2024
 * [x] Switch Netlify to point to new site
 * [x] Custom icon 
 * [x] Archive Jekyll site
-* [ ] Fix Manifest
+* [x] Fix Manifest
+* [x] Posts
+* [x] Policy section
+* [x] Policy page sort alphabetically
+* [x] Policy page header graphic
+* [x] Policy page link to full article (more info button)
+* [x] About page image (me)
+* [ ] Home Page: Replace capital building image (and credit)
+* [ ] Home page third banner image (and credit)
 * [ ] Home page content
 * [ ] About page content
-* [ ] Posts
-* [ ] 
-* [ ] 
-* [ ] 
-* [ ] 
+* [ ] Branded products store
+* [ ] Store page
 * [ ] 
 * [ ] 
 * [ ] 
 * [ ] Setup Algolia Index
 * [ ] Add Search page
+* [ ] Breadcrumbs
 * [ ] Setup notification service
