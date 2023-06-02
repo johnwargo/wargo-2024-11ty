@@ -19,14 +19,13 @@ The internet home for [John M. Wargo for President](https://wargo2024.com) (2024
 * [x] Policy page header graphic
 * [x] Policy page link to full article (more info button)
 * [x] About page image (me)
-* [ ] Home Page: Replace capital building image (and credit)
-* [ ] Home page third banner image (and credit)
-* [ ] Home page content
+* [x] Home Page: Replace capital building image (and credit)
+* [x] Home page third banner image (and credit)
+* [x] Home page content
 * [ ] About page content
 * [ ] Branded products store
 * [ ] Store page
 * [ ] Store page header image
-* [ ] 
 * [ ] 
 * [ ] Setup Algolia Index
 * [ ] Add Search page
