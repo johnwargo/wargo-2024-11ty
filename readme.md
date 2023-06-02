@@ -22,11 +22,11 @@ The internet home for [John M. Wargo for President](https://wargo2024.com) (2024
 * [x] Home Page: Replace capital building image (and credit)
 * [x] Home page third banner image (and credit)
 * [x] Home page content
-* [ ] Home page options: gun control, border wall (?), Legalize Marijuana 
-* [ ] Position paper on abortion, link to home page button
-* [ ] Link position paper on immigration
-* [ ] Position paper on legalizing marijiana with link from home page
-* [ ] Link border wall item to immigration position paper.
+* [x] Home page options: gun control, border wall (?), Legalize Marijuana 
+* [x] Link position paper on immigration
+* [x] Link border wall item to immigration position paper.
+* [x] Position paper on abortion, link to home page button
+* [x] Position paper on legalizing marijiana with link from home page
 * [ ] About page content
 * [ ] Branded products store
 * [ ] Store page
