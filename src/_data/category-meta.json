@@ -3,5 +3,10 @@
     "category": "Announcements",
     "count": 1,
     "description": "General announcements about the campaign or the candidate"
+  },
+  {
+    "category": "Ridiculousness",
+    "count": 1,
+    "description": ""
   }
 ]

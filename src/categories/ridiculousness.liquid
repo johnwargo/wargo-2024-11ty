@@ -5,9 +5,9 @@
     "data": "collections.post",
     "size": 20,
     "alias": "catposts",
-    "before": function(paginationData, fullData){ let data = paginationData.filter((item) => item.data.categories.includes('Announcements')); return Array.from(data).sort((a, b) => { return a.date < b.date ? 1 : -1; });}
+    "before": function(paginationData, fullData){ let data = paginationData.filter((item) => item.data.categories.includes('Ridiculousness')); return Array.from(data).sort((a, b) => { return a.date < b.date ? 1 : -1; });}
   },
-  "category": "Announcements",
+  "category": "Ridiculousness",
   "description": "General announcements about the campaign or the candidate",
   "eleventyComputed": {
     "title": "{{ category }}"
