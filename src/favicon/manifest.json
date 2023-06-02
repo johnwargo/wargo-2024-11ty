@@ -1,5 +1,7 @@
 {
  "name": "John M. Wargo for President",
+ "shortName" : "John M. Wargo",
+ "display": "standalone",
  "icons": [
   {
    "src": "/android-icon-36x36.png",
