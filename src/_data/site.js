@@ -1,5 +1,5 @@
 module.exports = {
-	title: "JOhn M. Wargo for President",
+	title: "John M. Wargo for President",
 	url: "https://wargo2024.com",
 	language: "en",
 	description: "Internet home for US Presidential Candidate John M. Wargo",
