@@ -27,7 +27,7 @@
 		"scope": "markdown, liquid",
 		"prefix": "!img",
 		"body": [
-			"{% image \"src/images/2023/\", \"\", \"image-full\" %}"
+			"{% image \"src/images/\", \"\", \"image fit\" %}"
 		],
 		"description": "Image Tag"
 	},

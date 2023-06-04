@@ -5,6 +5,11 @@
     "description": "General announcements about the campaign or the candidate"
   },
   {
+    "category": "News",
+    "count": 1,
+    "description": ""
+  },
+  {
     "category": "Ridiculousness",
     "count": 1,
     "description": ""
