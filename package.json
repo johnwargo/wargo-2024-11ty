@@ -2,17 +2,15 @@
   "name": "wargo-2024",
   "version": "0.0.1",
   "description": "Internet home for US Presidential candidate John M. Wargo",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "eleventy --serve",
-    "build": "eleventy"
-  },
-  "keywords": [
-    "Eleventy"
-  ],
   "author": "John M. Wargo",
   "license": "MIT",
+  "scripts": {
+    "clean": "rimraf _site",
+    "build:eleventy": "eleventy",
+    "watch:eleventy": "eleventy --serve",
+    "start": "npm-run-all --sequential clean watch:eleventy",
+    "build": "npm-run-all --sequential clean build:eleventy"
+  },  
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-img": "^3.1.0",
@@ -26,6 +24,11 @@
     "html-minifier": "^4.0.0",
     "markdown-it": "^13.0.1",
     "markdown-it-attrs": "^4.1.6",
-    "outdent": "^0.8.0"
-  }
+    "npm-run-all": "^4.1.5",
+    "outdent": "^0.8.0",
+    "rimraf": "^5.0.1"
+  },
+  "keywords": [
+    "Eleventy"
+  ]
 }
