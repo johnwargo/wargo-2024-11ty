@@ -27,11 +27,10 @@ The internet home for [John M. Wargo for President](https://wargo2024.com) (2024
 * [x] Link border wall item to immigration position paper.
 * [x] Position paper on abortion, link to home page button
 * [x] Position paper on legalizing marijuana with link from home page
-* [ ] About page content
+* [x] About page content
 * [ ] Branded products store
 * [ ] Store page
 * [ ] Store page header image
-* [ ] 
 * [ ] Setup Algolia Index
 * [ ] Add Search page
 * [ ] Breadcrumbs
