@@ -1,7 +1,12 @@
 {
-  "postsFolder": "src/posts",
-  "templateFile": "11ty-np.md",
-  "useYear": true,
+  "editorCmd": "code",
   "openAfterCreate": true,
-  "editorCmd": "code"
+  "paragraphCount": 4,
+  "postsFolder": "src/posts",
+  "promptCategory": true,
+  "promptTargetFolder": false,
+  "promptTemplateFile": false,
+  "templateFile": "11ty-np.md",
+  "timeStamp": true,
+  "useYear": true
 }
