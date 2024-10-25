@@ -5,6 +5,7 @@ date: 2024-10-24
 headerImage: 
 headerDescription: 
 categories: 
+  - News
 timestamp: 2024-10-24T23:51:57.408Z
 ---
 
