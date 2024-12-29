@@ -33,8 +33,7 @@ export default function (eleventyConfig) {
       widths: [...widths, null],
       formats: [...formats, null],
       outputDir: '_site/img',
-      urlPath: '/img',
-      // filenameFormat: function() {},
+      urlPath: '/img'
     });
 
     const sourceHtmlString = Object.values(imageMetadata)
