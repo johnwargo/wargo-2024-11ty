@@ -1,6 +1,5 @@
 const { EleventyHtmlBasePlugin } = require('@11ty/eleventy');
-
-const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 const markdownIt = require('markdown-it');
 const markdownItAttrs = require('markdown-it-attrs');
 const pluginDate = require('eleventy-plugin-date');
@@ -8,7 +7,7 @@ const pluginRss = require('@11ty/eleventy-plugin-rss');
 const embedYouTube = require('eleventy-plugin-youtube-embed');
 
 // local plugins
-const pluginImages = require("./eleventy.config.images.js");
+const pluginImages = require('./eleventy.config.images.js');
 
 // Transforms
 // https://learneleventyfromscratch.com/lesson/31.html#minifying-html-output
@@ -34,14 +33,14 @@ module.exports = eleventyConfig => {
 	};
 	const markdownLib = markdownIt(mdOptions)
 		.use(markdownItAttrs)
-		.disable("code");
+		.disable('code');
 
-	eleventyConfig.setLibrary("md", markdownLib);
+	eleventyConfig.setLibrary('md', markdownLib);
 
-	eleventyConfig.addShortcode("getKeywords", function (categories) {
-		let returnString = "";
+	eleventyConfig.addShortcode('getKeywords', function (categories) {
+		let returnString = '';
 		for (let category in categories) {
-			returnString += categories[category] + ", ";
+			returnString += categories[category] + ', ';
 		}
 		// Remove the last comma
 		return returnString.slice(0, -2);
@@ -63,7 +62,7 @@ module.exports = eleventyConfig => {
 		return post.templateContent;
 	}
 
-	eleventyConfig.addCollection("categories", function (collectionApi) {
+	eleventyConfig.addCollection('categories', function (collectionApi) {
 		let categories = new Set();
 		let posts = collectionApi.getFilteredByTag('post');
 		posts.forEach(p => {
@@ -73,8 +72,8 @@ module.exports = eleventyConfig => {
 		return Array.from(categories);
 	});
 
-	eleventyConfig.addCollection("policiesDescending", (collection) =>
-		collection.getFilteredByGlob("src/policies/*.md").sort((a, b) => {
+	eleventyConfig.addCollection('policiesDescending', (collection) =>
+		collection.getFilteredByGlob('src/policies/*.md').sort((a, b) => {
 			if (a.data.title > b.data.title) return 1;
 			else if (a.data.title < b.data.title) return -1;
 			else return 0;
@@ -96,8 +95,8 @@ module.exports = eleventyConfig => {
 		return JSON.stringify(variable);
 	});
 
-	eleventyConfig.addFilter("commaize", function (num) {
-		return num.toLocaleString("en-us");
+	eleventyConfig.addFilter('commaize', function (num) {
+		return num.toLocaleString('en-us');
 	});
 
 	// https://www.lenesaile.com/en/blog/organizing-the-eleventy-config-file/
@@ -106,16 +105,16 @@ module.exports = eleventyConfig => {
 	// copy the rest of the files
 	[
 		// Data files
-		"src/robots.txt",
-		"src/_data/*",
+		'src/robots.txt',
+		'src/_data/*',
 		// Template files
-		"src/assets/css/",
-		"src/assets/js/",
-		"src/assets/sass/",
-		"src/assets/webfonts/",
+		'src/assets/css/',
+		'src/assets/js/',
+		'src/assets/sass/',
+		'src/assets/webfonts/',
 		// Images folders
-		"src/images/*",
-		"src/images/headers/*",
+		'src/images/*',
+		'src/images/headers/*',
 
 	].forEach((path) => {
 		eleventyConfig.addPassthroughCopy(path);
@@ -135,9 +134,9 @@ module.exports = eleventyConfig => {
 	return {
 		dir: {
 			input: 'src',
-			output: "_site",
-			includes: "_includes",
-			layouts: "_layouts",
+			output: '_site',
+			includes: '_includes',
+			layouts: '_layouts',
 		}
 	}
 
