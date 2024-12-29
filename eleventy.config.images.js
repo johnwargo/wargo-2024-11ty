@@ -1,13 +1,12 @@
 // ==============================================
 // Image Shortcode
-// ==============================================
 // https://www.aleksandrhovhannisyan.com/blog/eleventy-image-plugin/
+// ==============================================
 
-const Image = require('@11ty/eleventy-img');
-// const path = require('path');
-const outdent = require('outdent');
+import Image from '@11ty/eleventy-img';
+import outdent from 'outdent';
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
 
   /**
    *  Maps a config of attribute-value pairs to an HTML string representing 

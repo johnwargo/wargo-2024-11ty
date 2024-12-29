@@ -4,6 +4,7 @@
   "description": "Internet home for US Presidential candidate John M. Wargo",
   "author": "John M. Wargo",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "clean": "rimraf _site",
     "build:eleventy": "eleventy",

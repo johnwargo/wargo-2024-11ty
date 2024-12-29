@@ -1,25 +1,22 @@
-const { EleventyHtmlBasePlugin } = require('@11ty/eleventy');
-const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
-const markdownIt = require('markdown-it');
-const markdownItAttrs = require('markdown-it-attrs');
-const pluginDate = require('eleventy-plugin-date');
-const pluginRss = require('@11ty/eleventy-plugin-rss');
-const embedYouTube = require('eleventy-plugin-youtube-embed');
+import EleventyHtmlBasePlugin from '@11ty/eleventy';
+import EleventyNavigationPlugin from '@11ty/eleventy-navigation';
+import markdownIt from 'markdown-it';
+import markdownItAttrs from 'markdown-it-attrs';
+import pluginDate from 'eleventy-plugin-date';
+import pluginRss from '@11ty/eleventy-plugin-rss';
+import embedYouTube from 'eleventy-plugin-youtube-embed';
 
 // local plugins
-const pluginImages = require('./eleventy.config.images.js');
-
-// Transforms
-// https://learneleventyfromscratch.com/lesson/31.html#minifying-html-output
-const htmlMinTransform = require('./src/transforms/html-min.js');
+import pluginImages from './eleventy.config.images.js';
+import htmlMinTransform from './src/transforms/html-min.js';
 
 // Create a helpful production flag
 const isProduction = process.env.NODE_ENV === 'production';
 
-module.exports = eleventyConfig => {
+export default function (eleventyConfig) {
 
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
-	eleventyConfig.addPlugin(eleventyNavigationPlugin);
+	eleventyConfig.addPlugin(EleventyNavigationPlugin);
 	eleventyConfig.addPlugin(embedYouTube);
 	eleventyConfig.addPlugin(pluginDate);
 	eleventyConfig.addPlugin(pluginRss);
@@ -104,27 +101,17 @@ module.exports = eleventyConfig => {
 	eleventyConfig.addPassthroughCopy({ 'src/favicon/*': '/' });
 	// copy the rest of the files
 	[
-		// Data files
 		'src/robots.txt',
 		'src/_data/*',
-		// Template files
 		'src/assets/css/',
 		'src/assets/js/',
 		'src/assets/sass/',
 		'src/assets/webfonts/',
-		// Images folders
 		'src/images/*',
-		'src/images/headers/*',
-
+		'src/images/headers/*'
 	].forEach((path) => {
 		eleventyConfig.addPassthroughCopy(path);
 	});
-
-	// Assumes cascading folders per year
-	// let thisYear = new Date().getFullYear();
-	// for (let i = 2009; i <= thisYear; i++) {
-	// 	eleventyConfig.addPassthroughCopy(`src/images/${i}/*`);
-	// }
 
 	// Only minify HTML if we are in production because it slows builds
 	if (isProduction) {

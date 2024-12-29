@@ -1,4 +1,4 @@
-module.exports = {
+export default {
 	title: "John M. Wargo for President",
 	url: "https://wargo2024.com",
 	language: "en",
