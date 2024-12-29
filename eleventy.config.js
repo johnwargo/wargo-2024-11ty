@@ -1,4 +1,4 @@
-import EleventyHtmlBasePlugin from '@11ty/eleventy';
+import { EleventyHtmlBasePlugin } from '@11ty/eleventy';
 import EleventyNavigationPlugin from '@11ty/eleventy-navigation';
 import markdownIt from 'markdown-it';
 import markdownItAttrs from 'markdown-it-attrs';
