@@ -6,7 +6,6 @@
 //   return { generatorStr: `${eleventyPackage.name} v${eleventyPackage.version}` }
 // }
 
-
 const fs = require('fs');
 
 module.exports = function () {
